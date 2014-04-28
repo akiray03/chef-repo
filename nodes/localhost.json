@@ -2,8 +2,7 @@
   "run_list": [
     "base",
     "ruby_build",
-    "rbenv::user",
-    "xbuild-builds"
+    "rbenv::user"
   ],
   "rbenv": {
     "user_installs": [
