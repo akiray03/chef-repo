@@ -1,4 +1,4 @@
 file_cache_path "/tmp/chef-repo/cache"
-cookbook_path ["/tmp/chef-repo/cookbooks", "/tmp/chef-repo/site-cookbooks", "/tmp/chef-repo/berks-cookbooks"]
+cookbook_path ["/tmp/chef-repo/cookbooks", "/tmp/chef-repo/site-cookbooks", "~/.berkshelf/cookbooks"]
 role_path "/tmp/chef-repo/roles"
 log_level :debug

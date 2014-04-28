@@ -1,5 +1,5 @@
 #!/bin/bash
 set -ex
 cd $(dirname $0)/..
-berks vendor /tmp/chef-repo/berks-cookbooks
+berks install
 sudo chef-solo -c solo.rb -j nodes/localhost.json -N localhost
