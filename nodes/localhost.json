@@ -1,5 +1,22 @@
 {
   "run_list": [
-    "base"
-  ]
+    "base",
+    "ruby_build",
+    "rbenv::user"
+  ],
+  "rbenv": {
+    "user_installs": [
+      {
+        "user": "akira",
+        "rubies": ["1.9.3-p545", "2.0.0-p451", "2.1.0", "2.1.1"],
+        "gems": {
+          "1.9.3-p545": ["bundler", "rake", "pry"],
+          "2.0.0-p451": ["bundler", "rake", "pry"],
+          "2.1.0": ["bundler", "rake", "pry"],
+          "2.1.1": ["bundler", "rake", "pry"]
+        },
+        "global": "2.1.1",
+      }
+    ]
+  }
 }
