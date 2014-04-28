@@ -25,5 +25,6 @@ end
 git '/home/akira/dotfiles' do
   repository 'git@github.com:akiray03/dotfiles.git'
   revision 'master'
+  user 'akira'
   action :sync
 end
