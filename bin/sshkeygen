@@ -5,5 +5,5 @@ PUB_FILE="$KEY_FILE.pub"
 set -ex
 
 ssh-keygen -b 4096 -t rsa -C vps.akira.to -f $KEY_FILE
-echo
+ln -s $KEY_FILE ~/.ssh/id_rsa
 cat $PUB_FILE
