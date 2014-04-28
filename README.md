@@ -9,7 +9,7 @@ source .profile
 sudo dpkg -i chefdk_0.0.1-1_amd64.deb
 sudo /opt/chef/embedded/bin/gem install knife-solo
 git clone https://github.com/akiray03/chef-repo.git /tmp/chef-repo
-/tmp/chef-repo/localhost-cook
+/tmp/chef-repo/bin/localhost-cook
 ```
 
 ### Link
