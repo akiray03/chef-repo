@@ -1,0 +1,9 @@
+#!/bin/bash
+
+KEY_FILE=/home/akira/.ssh/vps.akira.to
+PUB_FILE="$KEY_FILE.pub"
+set -ex
+
+ssh-keygen -b 4096 -t rsa -C vps.akira.to -f $KEY_FILE
+echo
+cat $PUB_FILE
