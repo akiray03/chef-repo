@@ -13,3 +13,11 @@ packages.each do |pkg|
     action :install
   end
 end
+
+template '/home/akira/.gitconfig' do
+  source 'gitconfig'
+end
+
+template '/home/akira/.gitignore' do
+  source 'gitignore'
+end

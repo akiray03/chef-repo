@@ -1,0 +1,16 @@
+[user]
+	name = Akira Yumiyama
+	email = yumiyama.akira@gmail.com
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+[core]
+	excludesfile = /home/akira/.gitignore
+[push]
+	default = simple
+[hub]
+	protocol = https
