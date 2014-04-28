@@ -2,7 +2,7 @@ chef-repo
 =========
 
 ```
-sudo aptitude install git curl
+sudo aptitude install git curl gcc g++ make autoconf
 curl -L https://www.opscode.com/chef/install.sh | sudo bash
 echo 'export PATH=/opt/chef/bin:$PATH' >> .profile
 source .profile
