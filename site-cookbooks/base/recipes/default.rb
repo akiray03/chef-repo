@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-packages = %w(zsh lv vim git ruby subversion apache2 make gcc curl)
+packages = %w(zsh lv vim git ruby subversion apache2 make gcc curl tmux)
 packages.each do |pkg|
   package pkg do
     action :install
@@ -20,4 +20,10 @@ end
 
 template '/home/akira/.gitignore' do
   source 'gitignore'
+end
+
+git '/home/akira/dotfiles' do
+  repository 'git@github.com:akiray03/dotfiles.git'
+  revision 'master'
+  action :sync
 end
