@@ -6,3 +6,10 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+packages = %w(zsh lv vim git ruby subversion apache2 make gcc curl)
+packages.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
