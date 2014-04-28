@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe   'xbuild'
+
 node["xbuild-builds"]["rubies"].each do |info|
   xbuild_ruby "install ruby #{info["version"]}" do
     version info["version"]
