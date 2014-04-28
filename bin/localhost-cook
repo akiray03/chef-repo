@@ -1,5 +1,8 @@
 #!/bin/bash
 set -ex
 cd $(dirname $0)/..
-berks install
+
+git clone https://github.com/fnichol/chef-rbenv cookbooks/rbenv
+git clone https://github.com/fnichol/chef-ruby_build cookbooks/ruby_build
+
 sudo chef-solo -c solo.rb -j nodes/localhost.json -N localhost
