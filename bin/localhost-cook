@@ -5,7 +5,7 @@ cookbook_clone()
 	local repo=$1
 	local path=$2
 
-	if [ ! -f $path ]; then
+	if [ ! -e $path ]; then
 		git clone $repo $path
 	fi
 
@@ -16,6 +16,6 @@ set -ex
 cd $(dirname $0)/..
 
 cookbook_clone https://github.com/fnichol/chef-rbenv cookbooks/rbenv
-cookbook_clone clone https://github.com/fnichol/chef-ruby_build cookbooks/ruby_build
+cookbook_clone https://github.com/fnichol/chef-ruby_build cookbooks/ruby_build
 
 sudo chef-solo -c solo.rb -j nodes/localhost.json -N localhost
