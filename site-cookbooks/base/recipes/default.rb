@@ -49,3 +49,14 @@ firewall_rule "ssh" do
   action :allow
   notifies :enable, "firewall[ufw]"
 end
+
+## locale
+execute "locale-gen" do
+  touchfile = "/var/tmp/.locale-gen.ja_JP.UTF-8"
+  command <<-EOF
+  locale-gen ja_JP.UTF-8
+  /usr/sbin/update-locale LANG=ja_JP.UTF-8
+  touch #{touchfile}
+  EOF
+  not_if { ::File.exist?(touchfile) }
+end
