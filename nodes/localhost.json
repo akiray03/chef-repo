@@ -4,6 +4,12 @@
     "ruby_build",
     "rbenv::user"
   ],
+  "base": {
+    "packages": [
+      "zsh", "lv", "vim", "git", "ruby", "subversion",
+      "apache2", "make", "gcc", "curl", "tmux", "tomcat7", "tomcat7-admin"
+    ]
+  },
   "rbenv": {
     "user_installs": [
       {
