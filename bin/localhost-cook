@@ -17,5 +17,6 @@ cd $(dirname $0)/..
 
 cookbook_clone https://github.com/fnichol/chef-rbenv cookbooks/rbenv
 cookbook_clone https://github.com/fnichol/chef-ruby_build cookbooks/ruby_build
+cookbook_cline https://github.com/opscode-cookbooks/firewall cookbooks/firewall
 
 sudo chef-solo -c solo.rb -j nodes/localhost.json -N localhost
