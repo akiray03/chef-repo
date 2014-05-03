@@ -27,3 +27,25 @@ git '/home/akira/dotfiles' do
   user 'akira'
   action :sync
 end
+
+## ufw
+firewall "ufw" do
+    action :enable
+end
+
+firewall_rule "http" do
+  port 80
+  action :allow
+  notifies :enable, "firewall[ufw]"
+end
+firewall_rule "https" do
+  port 443
+  action :allow
+  notifies :enable, "firewall[ufw]"
+end
+
+firewall_rule "ssh" do
+  port 22
+  action :allow
+  notifies :enable, "firewall[ufw]"
+end
